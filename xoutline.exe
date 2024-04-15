@@ -1,0 +1,48 @@
+Home
+    - intro
+
+Login/Signin
+    - login/signup portal
+        - username
+        - email
+        - password (encrypted)
+    - compulsory to buy any product
+
+Items
+    - products list 
+        - cake
+        - pastries
+        - puff
+        - cupcake
+        - muffins
+        - cookies
+        - macrons
+        - croissant
+        - doughnut
+        - creamroll
+        - bread items
+            - buns
+            - garlic bread
+            - pizza base
+            - burger bun
+    - i1 |buy|add to cart|
+        - show detail of item when clicked on i1
+    - cart |i1, i2,...,in|total price|buy|
+
+Artisans
+    - about our Artisans
+
+Why empower
+    - why empower 
+    Our motive
+    - help artisans to showcase their talent 
+    - support the economic development of homemaker 
+    - paves the way for their long-term success and sustainability in the market.
+
+About us
+    - all the projects we have worked on or will work on 
+    - all the partners who are with us in this project
+    - inquiry
+        - contact us
+
+

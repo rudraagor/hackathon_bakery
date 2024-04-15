@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainpage</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Include Bootstrap JavaScript and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="logo.css"> -->
+
+    <style>
+
+      
+    /* Style the navbar text */
+    .navbar-light .navbar-nav .nav-link {
+      color: #6c230f;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      color: #6c230f;
+    }
+
+    .box {
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .text-sec {
+      font-family: monospace; /* Set a different font for the text within the text-sec class */
+    }
+
+    .animated-text {
+      position: relative;
+      top: -100px; /* Move the text container up by 100px initially (adjust as needed) */
+      opacity: 0;
+      animation: slideDown 1.5s forwards; /* Animation duration and fill-mode */
+    }
+
+    .about-text {
+      font-family: cursive;
+    }
+
+    .about-heading {
+      font-family: cursive;
+    }
+
+    
+
+    @keyframes slideDown {
+      0% {
+        top: -100px;
+        opacity: 0;
+      }
+      100% {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+   
+    <div class="container">
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center fs-7 flex-grow-1 pe-3">
+            <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="main.html"><b>Home</b></a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="#"><b>Items</b></a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="#"><b>Artisans</b></a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="#"><b>About us</b></a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="#"><b>Contact us</b></a>
+                </li>
+              </ul>
+              <div class="d-flex justify-content-center align-items-center gap-3">
+                <a href="login.html" class="text-white text-decoration-none px-3 py-1 rounded-4 boho-btn">Login</a>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <style>
+        .navbar-light.bg-translucent {
+          background-color: rgba(255, 255, 255, 0.75); /* Adjust transparency as needed (0 for fully transparent, 1 for opaque) */
+        }
+      
+        .boho-btn {
+          background-color:  #6c230f; 
+          border-color: #6c230f; 
+          color:  #6c230f; 
+        }
+      </style>
+      
+      <section id="about">
+        <div class="about-section wrapper">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+                <h2 class="display-6 about-heading">Made with love, from our oven to your heart.</h2>
+                <p class="about-text">Explore our handcrafted breads, pastries, cakes, etc. <br> From flaky croissants to decadent cakes, we have something to satisfy every sweet tooth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+</body>
+
+</html>

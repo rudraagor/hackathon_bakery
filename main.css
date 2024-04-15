@@ -1,0 +1,12 @@
+body
+{
+  background: url('cmain05.png')  #ffded4;
+  /* background-blend-mode: multiply; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: monospace;
+}
+
+
