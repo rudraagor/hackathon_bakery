@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Include Bootstrap JavaScript and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="logo.css"> -->
+
+</head>
+<style>
+  body
+  {
+    background: url('cmain005.png')  #ffded4 ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: monospace;
+  }
+  .card {
+    margin: 0 auto; /* This centers the card horizontally */
+    /* background-color: rgba(255, 255, 255, 0); Set transparency to 0 for fully transparent background */
+    background-color: #fbece7 ;
+    font-family: cursive;
+    /* border: 1px solid #741a1a; Optional: adds a border to the card */
+  }
+
+  html,
+    body {
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+
+    body::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0); /* Transparent scrollbar thumb */
+      border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0);/* Transparent background for scrollbar track */
+    }
+</style>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+   
+        <div class="container">
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+    
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center fs-7 flex-grow-1 pe-3">
+                <li class="nav-item mx-2">
+                      <a class="nav-link" aria-current="page" href="main.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link active" href="item.html"><b>Items</b></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="ourgallery.html"><b>Our Gallery</b></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="aboutus.html"><b>About us</b></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="contactus.html"><b>Contact us</b></a>
+                    </li>
+                  </ul>
+                  <div class="d-flex justify-content-center align-items-center gap-3">
+                    <a href="login.html" class="text-white text-decoration-none px-3 py-1 rounded-4 boho-btn">Login</a>
+                  </div>
+          
+                </div>
+              </div>
+            </div>
+    </nav>
+      
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Wheat Cake</h5>
+            <p class="card-text">Item description</p>
+          </div>
+          <ul>
+            <li class="list-group-item">Price: </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Wheat Cake</h5>
+            <p class="card-text">Item description</p>
+          </div>
+          <ul>
+            <li class="list-group-item">Price: </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+          
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Wheat Cake</h5>
+            <p class="card-text">Item description</p>
+          </div>
+          <ul>
+            <li class="list-group-item">Price: </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+          
+</body>
+</html>

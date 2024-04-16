@@ -1,6 +1,6 @@
 body
 {
-  background: url('cmain05.png')  #ffded4;
+  background: url('cmain05.png')  #ffded4 ;
   /* background-blend-mode: multiply; */
   background-position: center;
   background-size: cover;
@@ -9,4 +9,52 @@ body
   font-family: monospace;
 }
 
+  /* Style the navbar text */
+  .navbar-light .navbar-nav .nav-link {
+    color: #6c230f;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    color: #6c230f;
+  }
+  .box {
+    padding: 10px;
+    margin: 10px;
+  }
+  .text-sec {
+    font-family: monospace; /* Set a different font for the text within the text-sec class */
+  }
+  .animated-text {
+    position: relative;
+    top: -100px; /* Move the text container up by 100px initially (adjust as needed) */
+    opacity: 0;
+    animation: slideDown 1.5s forwards; /* Animation duration and fill-mode */
+  }
+  .about-text {
+    font-family: cursive;
+  }
+  .about-heading {
+    font-family: cursive;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      top: -100px;
+      opacity: 0;
+    }
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+  }
 
+  .navbar-light.bg-translucent {
+    background-color: rgba(255, 255, 255, 0.75); /* Adjust transparency as needed (0 for fully transparent, 1 for opaque) */
+  }
+
+  .boho-btn {
+    background-color:  #6c230f; 
+    border-color: #6c230f; 
+    color:  #6c230f; 
+  }
