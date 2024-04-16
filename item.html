@@ -58,7 +58,28 @@
       width: 30px;
       height: 30px;
     }
-  
+  /* Custom CSS for left-sided navbar scrollspy */
+.nav-pills.flex-column {
+    /* Change the background color of the navbar */
+    background-color: #ffe6e6; /* Change this color to your desired navbar background color */
+    /* Change the text color of the navbar */
+    color: #000; /* Change this color to your desired navbar text color */
+    /* Add some padding for better readability */
+    padding: 10px;
+    /* Add border radius for rounded corners */
+    border-radius: 10px;
+    /* Add box-shadow for depth effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom CSS for active scrollspy item in left-sided navbar */
+.nav-pills.flex-column .nav-link.active {
+    /* Change the background color of the active item */
+    background-color: #ff9999; /* Change this color to your desired active item background color */
+    /* Change the text color of the active item */
+    color: #fff; /* Change this color to your desired active item text color */
+}
+
 </style>
 <body>
   
@@ -106,70 +127,201 @@
               </div>
             </div>
     </nav>
+
+
+<div class="row">
+  <div class="col-4">
+    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+      <nav class="nav nav-pills flex-column">
+        <a class="nav-link" href="#item-1">cakes</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3 my-1" href="#item-1-1">Wheat Cake</a>
+          <a class="nav-link ms-3 my-1" href="#item-1-2">Chocolate Cake</a>
+        </nav>
+        <a class="nav-link" href="#item-2">cupcake</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3 my-1" href="#item-2-1">Strawberry</a>
+          <a class="nav-link ms-3 my-1" href="#item-2-2">Chocolatec</a>
+        </nav>
+        <a class="nav-link" href="#item-3">cookies</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3 my-1" href="#item-3-1">vanilla cookies</a>
+          <a class="nav-link ms-3 my-1" href="#item-3-2">Chocolatechips cookies</a>
+        </nav>
+      </nav>
+    </nav>
+  </div>
+
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+
+      <div id="item-1">
+        <h4>cakes</h4>  
+      </div>
+
+      <div id="item-1-1">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Wheat Cake</h5>
+                <p class="card-text">Item description</p>
+              </div>
+              <ul>
+                <li class="list-group-item">Price: </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+
+    
+      </div>
+      <div id="item-1-2">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Chocolate Cake</h5>
+                <p class="card-text">Item description</p>
+              </div>
+              <ul>
+                <li class="list-group-item">Price: </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div id="item-2">
+        <h4>cupcake</h4>  
+      </div>
+      <div id="item-2-1">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Strawberry</h5>
+                <p class="card-text">Item description</p>
+              </div>
+              <ul>
+                <li class="list-group-item">Price: </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+    
+      </div>
+
+      <div id="item-2-2">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Chocolate cupCake</h5>
+                <p class="card-text">Item description</p>
+              </div>
+              <ul>
+                <li class="list-group-item">Price: </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+    
+      </div>
+
+
+      <div id="item-3">
+        <h4>cookies</h4>
+      </div>
+      <div id="item-3-1">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">vanilla</h5>
+                <p class="card-text">Item description</p>
+              </div>
+              <ul>
+                <li class="list-group-item">Price: </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+    
+      </div>
+      <div id="item-3-2">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Chocolatechips</h5>
+                <p class="card-text">Item description</p>
+              </div>
+              <ul>
+                <li class="list-group-item">Price: </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
       
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="cake01.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Wheat Cake</h5>
-            <p class="card-text">Item description</p>
-          </div>
-          <ul>
-            <li class="list-group-item">Price: </li>
-          </ul>
-        </div>
-      </div>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
+   
 
-
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="cake01.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Wheat Cake</h5>
-            <p class="card-text">Item description</p>
-          </div>
-          <ul>
-            <li class="list-group-item">Price: </li>
-          </ul>
-        </div>
-      </div>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
-          
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="cake01.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Wheat Cake</h5>
-            <p class="card-text">Item description</p>
-          </div>
-          <ul>
-            <li class="list-group-item">Price: </li>
-          </ul>
-        </div>
-      </div>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
+   
           
 </body>
 </html>
