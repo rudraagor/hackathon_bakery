@@ -21,24 +21,26 @@
 <style>
   body
   {
-    background: url('cmain005.png')  #ffded4 ;
+    background: url('cmain005.png')   #FDF5EA; 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: monospace;
+    /* height: 7000px; */
+    padding-top: 56px;
   }
   .card {
-    margin: 0 auto; /* This centers the card horizontally */
-    /* background-color: rgba(255, 255, 255, 0); Set transparency to 0 for fully transparent background */
-    background-color: #fbece7 ;
+    margin: 0 auto;
+    background-color: #fdf5eeb7 ;
     font-family: cursive;
-    /* border: 1px solid #741a1a; Optional: adds a border to the card */
   }
+  
 
   html,
-    body {
-      overflow-x: hidden; /* Hide horizontal scrollbar */
+    body 
+    {
+      overflow-x: hidden; 
     }
 
     body::-webkit-scrollbar {
@@ -47,12 +49,12 @@
     }
 
     body::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0); /* Transparent scrollbar thumb */
+      background: rgba(255, 255, 255, 0); 
       border-radius: 5px;
     }
 
     body::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0);/* Transparent background for scrollbar track */
+      background: rgba(255, 255, 255, 0);
     }
     .login-icon {
       width: 30px;
@@ -60,30 +62,61 @@
     }
   /* Custom CSS for left-sided navbar scrollspy */
 .nav-pills.flex-column {
-    /* Change the background color of the navbar */
-    background-color: #ffe6e6; /* Change this color to your desired navbar background color */
-    /* Change the text color of the navbar */
-    color: #000; /* Change this color to your desired navbar text color */
-    /* Add some padding for better readability */
+    background-color:#fef9e776; /* Change this color to your desired navbar background color */
+    color: #000000; /* Change this color to your desired active item text color */
     padding: 10px;
-    /* Add border radius for rounded corners */
     border-radius: 10px;
-    /* Add box-shadow for depth effect */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
 }
 
 /* Custom CSS for active scrollspy item in left-sided navbar */
 .nav-pills.flex-column .nav-link.active {
-    /* Change the background color of the active item */
-    background-color: #ff9999; /* Change this color to your desired active item background color */
-    /* Change the text color of the active item */
-    color: #fff; /* Change this color to your desired active item text color */
+    background-color: #AB4F1D; /* Change this color to your desired active item background color */
+    color: #ffe4be; /* Change this color to your desired active item text color */
 }
+
+.nav-link
+{
+  color: #AB4F1D; /* Change this color to your desired navbar text color */
+
+}
+
+.nav-pills.flex-column .nav-link:hover,
+.nav-pills.flex-column .nav-link:focus {
+  /* text-decoration: none; Remove underline on hover/focus */
+  /* outline: none; Remove outline on focus */
+  color: #5A2919;
+}
+
+#navbar-example3 {
+    /* Other styles... */
+    height: 100vh; /* Adjust the height as needed */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+.navbar {
+  background: url('n04.png') #FDF5EA; 
+  /* background: url('nav002.png') #FDF5EA;  */
+  background-size: cover;
+}
+
+.card-img-fluid {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-top-left-radius: 5px; /* Adjust the radius to your preference */
+}
+
+.card-body {
+  padding: 2rem;  /* Example padding value */
+}
+
 
 </style>
 <body>
-  
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-light  fixed-top">
    
         <div class="container">
           <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
@@ -128,50 +161,55 @@
             </div>
     </nav>
 
-
-<div class="row">
+    <div class="row">
+  <!-- scrollspy -->
   <div class="col-4">
-    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end position-fixed">
       <nav class="nav nav-pills flex-column">
-        <a class="nav-link" href="#item-1">cakes</a>
+        <a class="nav-link" href="#item-1"><b>Cakes</b></a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3 my-1" href="#item-1-1">Wheat Cake</a>
-          <a class="nav-link ms-3 my-1" href="#item-1-2">Chocolate Cake</a>
+          <a class="nav-link ms-3 my-1" href="#item-1-1">Chocolate Cake</a>
+          <a class="nav-link ms-3 my-1" href="#item-1-2">Cheese Cake</a>
         </nav>
         <a class="nav-link" href="#item-2">cupcake</a>
         <nav class="nav nav-pills flex-column">
           <a class="nav-link ms-3 my-1" href="#item-2-1">Strawberry</a>
-          <a class="nav-link ms-3 my-1" href="#item-2-2">Chocolatec</a>
+          <a class="nav-link ms-3 my-1" href="#item-2-2">Chocolate</a>
         </nav>
         <a class="nav-link" href="#item-3">cookies</a>
         <nav class="nav nav-pills flex-column">
           <a class="nav-link ms-3 my-1" href="#item-3-1">vanilla cookies</a>
           <a class="nav-link ms-3 my-1" href="#item-3-2">Chocolatechips cookies</a>
         </nav>
+        <a class="nav-link" href="#item-4">macrons</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3 my-1" href="#item-3-1">vanilla</a>
+          <a class="nav-link ms-3 my-1" href="#item-3-2">Chocolate</a>
+        </nav>
       </nav>
     </nav>
   </div>
-
+  
   <div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
-
+      
       <div id="item-1">
         <h4>cakes</h4>  
       </div>
-
+      
       <div id="item-1-1">
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+              <img src="cake01.png" class="card-img-fluid" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Wheat Cake</h5>
-                <p class="card-text">Item description</p>
+                <h5 class="card-title">Chocolate Cake</h5>
+                <p class="card-text"> A decadent dream come true. This chocolate cake is moist, rich, and bursting with deep chocolate flavor.</p>
               </div>
               <ul>
-                <li class="list-group-item">Price: </li>
+                Price: 
               </ul>
             </div>
           </div>
@@ -180,19 +218,19 @@
             <a href="#" class="card-link">Another link</a>
           </div>
         </div>
-
-    
+        
+        
       </div>
       <div id="item-1-2">
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+              <img src="icake03.jpg" class="card-img-fluid" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Chocolate Cake</h5>
-                <p class="card-text">Item description</p>
+                <h5 class="card-title">Cheese Cake</h5>
+                <p class="card-text">Creamy, dreamy, and oh-so-smooth. Our cheesecake is a delightful balance of tangy and sweet, perfect for any occasion.</p>
               </div>
               <ul>
                 <li class="list-group-item">Price: </li>
@@ -204,7 +242,6 @@
             <a href="#" class="card-link">Another link</a>
           </div>
         </div>
-    
       </div>
     
       <div id="item-2">
@@ -214,7 +251,7 @@
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+              <img src="cake01.png" class="card-img-fluid" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -231,14 +268,14 @@
             <a href="#" class="card-link">Another link</a>
           </div>
         </div>
-    
+        
       </div>
-
+      
       <div id="item-2-2">
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+              <img src="cake01.png" class="card-img-fluid" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -255,10 +292,11 @@
             <a href="#" class="card-link">Another link</a>
           </div>
         </div>
-    
+        
       </div>
-
-
+      
+      
+      
       <div id="item-3">
         <h4>cookies</h4>
       </div>
@@ -266,7 +304,7 @@
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+              <img src="cake01.png" class="card-img-fluid" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -289,7 +327,7 @@
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="cake01.png" class="img-fluid rounded-start" alt="...">
+              <img src="cake01.png" class="card-img-fluid" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -306,7 +344,58 @@
             <a href="#" class="card-link">Another link</a>
           </div>
         </div>
-    
+        
+      </div>
+
+      <div id="item-4">
+        <h4>macrons</h4>  
+      </div>
+      <div id="item-4-1">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="cake01.png" class="card-img-fluid" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">vanila</h5>
+                <p class="card-text">Item description</p>
+              </div>
+              <ul>
+                <li class="list-group-item">Price: </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div id="item-4-2">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="cake01.png" class="card-img-fluid" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Chocolate</h5>
+                <p class="card-text">Item description</p>
+              </div>
+              <ul>
+                <li class="list-group-item">Price: </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -314,14 +403,5 @@
 
 
 
-
-
-
-
-      
-   
-
-   
-          
 </body>
 </html>
