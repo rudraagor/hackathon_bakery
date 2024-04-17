@@ -118,6 +118,11 @@ body {
     text-decoration: none;
   }
   
+  .contact-icon {
+    width: 30px; /* Adjust this value as needed */
+    height: 30px; /* Adjust this value as needed */
+}
+
   
   /* Social Media Icons */
   .social-media-list {
@@ -130,7 +135,7 @@ body {
   }
   
   .social-media-list li a {
-    color:#512323;
+    color:#ffffff;
   }
   
   .social-media-list li {
@@ -141,52 +146,12 @@ body {
     margin: 10px 3px;
     line-height: 60px;
     border-radius: 50%;
-    color: #cc8772;
-    background-color: rgb(27,27,27);
+    color: #ffffff;
+    background-color: rgb(255, 255, 255);
     cursor: pointer; 
     transition: all .2s ease-in-out;
   }
-  
-  .social-media-list li:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px #e98787;
-    transition: all .2s ease-in-out;
-  }
-  
-  .social-media-list li:hover {
-    background-color: #5d2424; 
-  }
-  
-  .social-media-list li:hover:after {
-    opacity: 1;  
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
-  }
-  
-  .social-media-list li:hover a {
-    color: #dd4d4d;
-  }
-  
-  .copyright {
-    font: 200 14px 'Oswald', sans-serif;
-    color: #555;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-  
-  hr {
-    border-color: rgba(219, 115, 115, 0);
-  }
-  
-  /* Begin Media Queries*/
+
   @media screen and (max-width: 850px) {
     .contact-wrapper {
       display: flex;
@@ -211,7 +176,7 @@ body {
       line-height: 60px;
     }
   }
-  
+
   @media screen and (max-width: 569px) {
   
     .direct-contact-container, .form-wrapper {
@@ -253,4 +218,4 @@ body {
     .send-button {
       width: 99%;
     }
-  }
+  } 
