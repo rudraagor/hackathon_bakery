@@ -17,23 +17,75 @@
     <link rel="stylesheet" href="main.css">
     <!-- <link rel="stylesheet" href="logo.css"> -->
 
-</head>
+
 <style>
   body
-{
-  background: url('cmain005.png')  #ffded4 ;
-  /* background-blend-mode: multiply; */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: monospace;
-}
-.login-icon {
+  {
+    background: url('cmain005.png')  #ffded4 ;
+    /* background-blend-mode: multiply; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: monospace;
+  }
+  .login-icon {
       width: 30px;
       height: 30px;
     }
-</style>
+
+  .container2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    }
+      
+  .card {
+    flex: 1;
+    margin-right: 10px; /* Adjust the margin as per your preference */
+    background-color: #f0f0f000;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px;
+    }
+
+  .card img {
+    width: 600px; /* Set the width of the image to 100% */
+    height: 300px; /* Let the height adjust proportionally */
+    object-fit: cover; /* Ensure the image covers the entire space */
+  }
+  
+  .card:last-child {
+    margin-right: 0;
+   }
+   html,
+    body 
+    {
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+
+    body::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0); /* Transparent scrollbar thumb */
+      border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0);/* Transparent background for scrollbar track */
+    }
+    .login-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+
+      </style>
+</head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
    
@@ -79,8 +131,45 @@
           </div>
         </div>
       </nav>
+            
+      <div class="container2">
+        <div class="card">
+          <img src="fbun.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="card">
+          <img src="fcake.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="card">
+          <img src="fcookies.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+      </div>
+
+      <div class="container2">
+        <div class="card">
+          <img src="fcrosant.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="card">
+          <img src="fcupcake.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="card">
+          <img src="fdonuts.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+      </div>
       
-          
+      <div class="container2">
+        <div class="card">
+          <img src="fmacarons.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="card">
+          <img src="fpastry.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="card">
+          <img src="fcheesecake.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+      </div>
+      
+      
+      
 </body>
 
 </html>
