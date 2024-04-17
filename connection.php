@@ -16,7 +16,7 @@
 
         $stmt->bind_param("sss", $username, $email, $pass);
         $stmt->execute();
-        echo"Successfully registered";
+        header("Location: login.php");
         $stmt->close();
         $conn->close();
     }
