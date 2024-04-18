@@ -17,10 +17,45 @@
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="logo.css"> -->
 
+    <style>  body
+      {
+        background: url('cmain005.png')  #ffded4 ;
+        /* background-blend-mode: multiply; */
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: monospace;
+        /* padding-top: 56px; */
+      }
+      
+      html,
+    body 
+    {
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+
+    body::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0); /* Transparent scrollbar thumb */
+      border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0);/* Transparent background for scrollbar track */
+    }
+    .login-icon {
+      width: 30px;
+      height: 30px;
+    }</style>
 </head>
 
 <body>
-  <section class="h-100 h-custom" style="background-color: #eee;">
+  <section class="h-100 h-custom">
     <div class="container h-100 py-5">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
@@ -34,7 +69,7 @@
   
                   <div class="d-flex align-items-center mb-5">
                     <div class="flex-shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/13.webp"
+                      <img src="fcake.jpg"
                         class="img-fluid" style="width: 150px;" alt="Generic placeholder image">
                     </div>
                     <div class="flex-grow-1 ms-3">
@@ -47,7 +82,7 @@
                           <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
                             class="minus"></button>
                           <input class="quantity fw-bold text-black" min="0" name="quantity" value="1"
-                            type="number">
+                            type="number" id="elem1">
                           <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                             class="plus"></button>
                         </div>
@@ -57,12 +92,12 @@
   
                   <div class="d-flex align-items-center mb-5">
                     <div class="flex-shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/6.webp"
+                      <img src="icupcake04.jpg"
                         class="img-fluid" style="width: 150px;" alt="Generic placeholder image">
                     </div>
                     <div class="flex-grow-1 ms-3">
                       <a href="#!" class="float-end text-black"><i class="fas fa-times"></i></a>
-                      <h5 class="text-primary">Strawberry Cupcake</h5>
+                      <h5 class="text-primary">Chocolate Cupcake</h5>
                       <h6 style="color: #9e9e9e;">4 pieces</h6>
                       <div class="d-flex align-items-center">
                         <p class="fw-bold mb-0 me-5 pe-3">₹150</p>
@@ -70,7 +105,7 @@
                           <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
                             class="minus"></button>
                           <input class="quantity fw-bold text-black" min="0" name="quantity" value="1"
-                            type="number">
+                            type="number" id="elem2">
                           <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                             class="plus"></button>
                         </div>
@@ -80,15 +115,12 @@
   
                 
   
-                  <hr class="mb-4" style="height: 2px; background-color: #1266f1; opacity: 1;">
+                  <hr class="mb-4" style="height: 2px; background-color: #8F3A16; opacity: 1;">
   
-                  <div class="d-flex justify-content-between px-x">
-                    <p class="fw-bold">Discount:</p>
-                    <p class="fw-bold">95$</p>
-                  </div>
-                  <div class="d-flex justify-content-between p-2 mb-2" style="background-color: #e1f5fe;">
+ 
+                  <div class="d-flex justify-content-between p-2 mb-2" style="background-color: #e7926d;">
                     <h5 class="fw-bold mb-0">Total:</h5>
-                    <h5 class="fw-bold mb-0">2261$</h5>
+                    <h5 class="fw-bold mb-0" id="total">700</h5>
                   </div>
   
                 </div>
@@ -100,13 +132,13 @@
   
                     <div data-mdb-input-init class="form-outline mb-5">
                       <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                        value="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                        value="" minlength="19" maxlength="19" />
                       <label class="form-label" for="typeText">Card Number</label>
                     </div>
   
                     <div data-mdb-input-init class="form-outline mb-5">
                       <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                        value="John Smith" />
+                        value="" />
                       <label class="form-label" for="typeName">Name on card</label>
                     </div>
   
@@ -127,13 +159,12 @@
                       </div>
                     </div>
   
-                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit <a
-                        href="#!">obcaecati sapiente</a>.</p>
+   
   
                     <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block btn-lg">Buy now</button>
   
                     <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
-                      <a href="#!"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
+                      <a href="item.html"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
                     </h5>
   
                   </form>
@@ -147,6 +178,35 @@
       </div>
     </div>
   </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // const quantityInputs = document.querySelectorAll('.quantity');
+        const quantityInputs = [document.getElementById('elem1'),document.getElementById('elem2')]
+        const totalAmountElement = document.getElementById('total');
+        const productPrices = [550, 150]; // Prices of the products
+        
+        // Function to calculate total amount
+        function calculateTotal() {
+            let total = 0;
+            quantityInputs.forEach((input, index) => {
+                total += parseInt(input.value) * productPrices[index];
+            });
+            return total;
+        }
+        
+        // Update total amount
+        function updateTotal() {
+            totalAmountElement.textContent = `₹${calculateTotal() * 2}`; // Double the total
+        }
+
+        // Add event listeners to quantity input buttons
+        // quantityInputs.forEach(input => {
+        //     input.addEventListener('input', updateTotal);
+        // });
+    });
+</script>
+
           
 </body>
 
