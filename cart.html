@@ -4,210 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakery</title>
+    <title>Shopping Cart</title>
     <!-- Include Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- Include Bootstrap JavaScript and jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-    </script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="logo.css"> -->
 
-    <style>  body
-      {
-        background: url('cmain005.png')  #ffded4 ;
-        /* background-blend-mode: multiply; */
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        font-family: monospace;
-        /* padding-top: 56px; */
-      }
-      
-      html,
-    body 
-    {
-      overflow-x: hidden; /* Hide horizontal scrollbar */
-    }
-
-    body::-webkit-scrollbar {
-      width: 0px;
-      height: 0px;
-    }
-
-    body::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0); /* Transparent scrollbar thumb */
-      border-radius: 5px;
-    }
-
-    body::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0);/* Transparent background for scrollbar track */
-    }
-    .login-icon {
-      width: 30px;
-      height: 30px;
-    }</style>
+    <style>
+        /* Add your custom CSS here */
+        body
+{
+  background: url('cmain005.png')  #ffded4 ;
+  /* background-blend-mode: multiply; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: monospace;
+}
+    </style>
 </head>
 
 <body>
-  <section class="h-100 h-custom">
-    <div class="container h-100 py-5">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col">
-          <div class="card shopping-cart" style="border-radius: 15px;">
-            <div class="card-body text-black">
-  
-              <div class="row">
-                <div class="col-lg-6 px-5 py-4">
-  
-                  <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Your products</h3>
-  
-                  <div class="d-flex align-items-center mb-5">
-                    <div class="flex-shrink-0">
-                      <img src="fcake.jpg"
-                        class="img-fluid" style="width: 150px;" alt="Generic placeholder image">
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <a href="#!" class="float-end text-black"><i class="fas fa-times"></i></a>
-                      <h5 class="text-primary">Chocolate cake</h5>
-                      <h6 style="color: #9e9e9e;">500 gram</h6>
-                      <div class="d-flex align-items-center">
-                        <p class="fw-bold mb-0 me-5 pe-3">₹550</p>
-                        <div class="def-number-input number-input safari_only">
-                          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                            class="minus"></button>
-                          <input class="quantity fw-bold text-black" min="0" name="quantity" value="1"
-                            type="number" id="elem1">
-                          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                            class="plus"></button>
+    <section class="h-100 h-custom">
+        <div class="container h-100 py-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card shopping-cart" style="border-radius: 15px;">
+                        <div class="card-body text-black">
+
+                            <div class="row">
+                                <div class="col-lg-12 px-5 py-4">
+
+                                    <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Your Cart</h3>
+
+                                    <ul id="cart-list" class="list-group mb-3"></ul>
+
+                                    <p id="total" class="fw-bold mb-0 text-end"></p>
+
+                                    <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
+                                        <a href="item.html"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
+                                    </h5>
+
+                                </div>
+                            </div>
+
                         </div>
-                      </div>
                     </div>
-                  </div>
-  
-                  <div class="d-flex align-items-center mb-5">
-                    <div class="flex-shrink-0">
-                      <img src="icupcake04.jpg"
-                        class="img-fluid" style="width: 150px;" alt="Generic placeholder image">
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                      <a href="#!" class="float-end text-black"><i class="fas fa-times"></i></a>
-                      <h5 class="text-primary">Chocolate Cupcake</h5>
-                      <h6 style="color: #9e9e9e;">4 pieces</h6>
-                      <div class="d-flex align-items-center">
-                        <p class="fw-bold mb-0 me-5 pe-3">₹150</p>
-                        <div class="def-number-input number-input safari_only">
-                          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                            class="minus"></button>
-                          <input class="quantity fw-bold text-black" min="0" name="quantity" value="1"
-                            type="number" id="elem2">
-                          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                            class="plus"></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-  
-                
-  
-                  <hr class="mb-4" style="height: 2px; background-color: #8F3A16; opacity: 1;">
-  
- 
-                  <div class="d-flex justify-content-between p-2 mb-2" style="background-color: #e7926d;">
-                    <h5 class="fw-bold mb-0">Total:</h5>
-                    <h5 class="fw-bold mb-0" id="total">700</h5>
-                  </div>
-  
                 </div>
-                <div class="col-lg-6 px-5 py-4">
-  
-                  <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Payment</h3>
-  
-                  <form class="mb-5">
-  
-                    <div data-mdb-input-init class="form-outline mb-5">
-                      <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                        value="" minlength="19" maxlength="19" />
-                      <label class="form-label" for="typeText">Card Number</label>
-                    </div>
-  
-                    <div data-mdb-input-init class="form-outline mb-5">
-                      <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                        value="" />
-                      <label class="form-label" for="typeName">Name on card</label>
-                    </div>
-  
-                    <div class="row">
-                      <div class="col-md-6 mb-5">
-                        <div data-mdb-input-init class="form-outline">
-                          <input type="text" id="typeExp" class="form-control form-control-lg" value="01/22"
-                            size="7" id="exp" minlength="7" maxlength="7" />
-                          <label class="form-label" for="typeExp">Expiration</label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-5">
-                        <div data-mdb-input-init class="form-outline">
-                          <input type="password" id="typeText" class="form-control form-control-lg"
-                            value="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                          <label class="form-label" for="typeText">Cvv</label>
-                        </div>
-                      </div>
-                    </div>
-  
-   
-  
-                    <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block btn-lg">Buy now</button>
-  
-                    <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
-                      <a href="item.html"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
-                    </h5>
-  
-                  </form>
-  
-                </div>
-              </div>
-  
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // const quantityInputs = document.querySelectorAll('.quantity');
-        const quantityInputs = [document.getElementById('elem1'),document.getElementById('elem2')]
-        const totalAmountElement = document.getElementById('total');
-        const productPrices = [550, 150]; // Prices of the products
-        
-        // Function to calculate total amount
-        function calculateTotal() {
-            let total = 0;
-            quantityInputs.forEach((input, index) => {
-                total += parseInt(input.value) * productPrices[index];
-            });
-            return total;
-        }
-        
-        // Update total amount
-        function updateTotal() {
-            totalAmountElement.textContent = `₹${calculateTotal() * 2}`; // Double the total
-        }
+    <!-- Include Bootstrap JavaScript and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-        // Add event listeners to quantity input buttons
-        // quantityInputs.forEach(input => {
-        //     input.addEventListener('input', updateTotal);
-        // });
-    });
-</script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
-          
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalAmount = 0;
+            let cartList = document.getElementById('cart-list');
+            let totalElement = document.getElementById('total');
+
+            // Function to remove item from cart
+            function removeFromCart(index) {
+                cartItems.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cartItems));
+                renderCart();
+            }
+
+            // Function to render cart items
+            function renderCart() {
+                cartList.innerHTML = '';
+                totalAmount = 0;
+                cartItems.forEach((item, index) => {
+                    let listItem = document.createElement('li');
+                    listItem.textContent = `${item.name}: ₹${item.price}`;
+                    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+                    // Add a button to remove the item from the cart
+                    let removeButton = document.createElement('button');
+                    removeButton.textContent = 'Remove';
+                    removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+                    removeButton.addEventListener('click', () => removeFromCart(index));
+                    listItem.appendChild(removeButton);
+                    cartList.appendChild(listItem);
+                    totalAmount += item.price;
+                });
+
+                totalElement.textContent = `Total: ₹${totalAmount}`;
+            }
+
+            renderCart();
+        });
+    </script>
 </body>
 
 </html>
