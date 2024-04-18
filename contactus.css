@@ -14,7 +14,7 @@ body {
     text-align: center;
     margin: 0 auto;
     padding: 40px 0;
-    font: 300 60px 'Oswald', sans-serif;
+    font: 300 60px monoospace;
     color: #c25b5b;
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -34,7 +34,7 @@ body {
   .form-horizontal {
     /*float: left;*/
     max-width: 400px;
-    font-family: 'Lato';
+    font-family: monospace;
     font-weight: 400;
   }
   
@@ -64,7 +64,7 @@ body {
   .send-text {
     display: block;
     margin-top: 10px;
-    font: 700 12px 'Lato', sans-serif;
+    font: 700 12px monospace;
     letter-spacing: 2px;
   }
   
@@ -91,7 +91,7 @@ body {
   }
   
   .contact-text {
-    font: 300 18px 'Lato', sans-serif;
+    font: 300 18px monospace;
     letter-spacing: 1.9px;
     color: #381919;
   }
