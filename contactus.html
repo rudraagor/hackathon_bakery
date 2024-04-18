@@ -103,6 +103,14 @@
         .social-media-list li {
             margin-right: 10px;
         }
+
+        .section-header{
+            font-family: monospace;
+        }
+
+        .info{
+            background-color: #fdf5ea3f;
+        }
     </style>
 
 </head>
@@ -160,6 +168,7 @@
 
         <div class="row">
             <div class="col-md-6 contact-info">
+                <div class = "info">
                 <ul class="contact-list">
                     <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">BBIT, VVN,
                                 Gujarat</span></i></li>
@@ -172,6 +181,7 @@
                                     href="mailto:jainisomani06@gmail.com" title="Send me an email">jaini_somani06@gmail.com</a></span></i>
                     </li>
                 </ul>
+            </div>
 
                 <ul class="social-media-list">
                     <li>
@@ -190,8 +200,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-
+        </div>
             <div class="col-md-6">
                 <form id="contact-form" method="post" action="save_message.php">
                     <div class="form-group">
@@ -207,11 +216,11 @@
                     <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"
                         required></textarea>
 
-                    <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-                        <div class="alt-send-button">
-                            <i class="fas fa-paper-plane"></i><span class="send-text">SEND</span>
-                        </div>
-                    </button>
+                        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND" style="background-color: #007bff; color: white; text-align: center;">
+                            Submit
+                          </button>
+                          
+                          
                 </form>
             </div>
         </div>
