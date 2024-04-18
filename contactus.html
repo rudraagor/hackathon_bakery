@@ -20,154 +20,203 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-BmoyLrXLNMsk1z77KcEtRCMPqKMaC3kL9+EPwDw4aPtN/hSW2BbX6B/SExbpXr+06ag/92T12HItCz/TJ9N/0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+    <style>
+        body {
+            background: url('cmain005.png'), #FDF5EA;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: monospace;
+            padding-top: 56px;
+            overflow-x: hidden;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        body::-webkit-scrollbar,
+        body::-webkit-scrollbar-thumb,
+        body::-webkit-scrollbar-track {
+            width: 0px;
+            height: 0px;
+            background: rgba(255, 255, 255, 0);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+        }
+
+        .login-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .navbar {
+            background: url('n04.png') #FDF5EA;
+            background-size: cover;
+        }
+        .social-media-list{
+          align-content: center;
+        }
+
+        /* Contact Form Styles */
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        #contact-form textarea {
+            height: 200px;
+        }
+
+        #contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        .contact-info {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .social-media-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .social-media-list li {
+            margin-right: 10px;
+        }
+    </style>
+
 </head>
-<style>
-  body
-{
-  background: url('cmain005.png')  #ffded4 ;
-  /* background-blend-mode: multiply; */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: monospace;
-  
-}
-.login-icon {
-      width: 30px;
-      height: 30px;
-    }
-</style>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-   
-    <div class="container">
-      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
 
-      <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header border-bottom">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-center fs-7 flex-grow-1 pe-3">
-            <li class="nav-item mx-2">
-                  <a class="nav-link" aria-current="page" href="main.html"><b>Home</b></a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link" href="item.html"><b>Items</b></a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link" href="ourgallery.html"><b>Our Gallery</b></a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link" href="aboutus.html"><b>About us</b></a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link active" href="contactus.html"><b>Contact us</b></a>
-                </li>
-              </ul>
-              <div class="d-flex justify-content-center gap-3">
-                <a href="login.php">
-                  <img src="user.png" alt="Login" class="login-icon">
-                </a>
-                <a href="login.html">
-                  <img src="cart03.png" alt="Login" class="login-icon">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      
-      <section id="contact">
-  
-        <h1 class="section-header">Contact us</h1>
-        
-        <div class="contact-wrapper">
-        
-        <!-- Left contact page --> 
-          
-          <form id="contact-form" class="form-horizontal" role="form">
-             
-            <div class="form-group">
-              <div class="col-sm-12">
-                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-              </div>
-            </div>
-      
-            <div class="form-group">
-              <div class="col-sm-12">
-                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-              </div>
-            </div>
-      
-            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-            
-            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-              <div class="alt-send-button">
-                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-              </div>
-            
+        <div class="container">
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            
-          </form>
-          
-        <!-- Left contact page --> 
-          
-            <div class="direct-contact-container">
-      
-              <ul class="contact-list">
-                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">BBIT, VVN, Gujarat</span></i></li>
-                
-                <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:91-9586055545" title="Give me a call">(+91) 9586055545</a></span></i></li>
-                
-                <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:jainisomani06@gmail.com" title="Send me an email">jaini_somani06@gmail.com</a></span></i></li>
-                
-              </ul>
-      
-              <hr>
-              <ul class="social-media-list">
-              
-                <li>
-                  <a href="https://www.instagram.com/jaini_somani06/" target="_blank">
-                      <img src="instagram.png" alt="Instagram" class="contact-icon">
-                  </a>
-              </li>
 
-              <li>
-                  <a href="https://wa.me/9586055545">
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
 
-                    <img src="whatsapp.png" alt="whatsapp" class="contact-icon">
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://twitter.com/JainiSoman06" target="_blank">
-
-                <img src="twitter.png" alt="Instagram" class="contact-icon">
-            </a>
-        </li>
-                   
-              </ul>
-              <hr>
-
-  
-        
-                <!-- Add other social media icons here -->
-            
-            
-           
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center fs-7 flex-grow-1 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" aria-current="page" href="main.html"><b>Home</b></a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="item.html"><b>Items</b></a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="ourgallery.html"><b>Our Gallery</b></a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="aboutus.html"><b>About us</b></a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" href="contactus.html"><b>Contact us</b></a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="login.php">
+                            <img src="user.png" alt="Login" class="login-icon">
+                        </a>
+                        <a href="login.html">
+                            <img src="cart03.png" alt="Login" class="login-icon">
+                        </a>
+                    </div>
+                </div>
             </div>
-          
         </div>
-        
-      </section>  
-        
-        
+    </nav>
+
+    <div class="container">
+        <h3 class="section-header">Contact us</h3>
+
+        <div class="row">
+            <div class="col-md-6 contact-info">
+                <ul class="contact-list">
+                    <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">BBIT, VVN,
+                                Gujarat</span></i></li>
+
+                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                                    href="tel:91-9586055545" title="Give me a call">(+91) 9586055545</a></span></i>
+                    </li>
+
+                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
+                                    href="mailto:jainisomani06@gmail.com" title="Send me an email">jaini_somani06@gmail.com</a></span></i>
+                    </li>
+                </ul>
+
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.instagram.com/jaini_somani06/" target="_blank">
+                            <img src="instagram.png" alt="Instagram" class="contact-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/9586055545">
+                            <img src="whatsapp.png" alt="WhatsApp" class="contact-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/JainiSoman06" target="_blank">
+                            <img src="twitter.png" alt="Twitter" class="contact-icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <form id="contact-form" method="post" action="save_message.php">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value=""
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value=""
+                            required>
+                    </div>
+
+                    <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"
+                        required></textarea>
+
+                    <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                        <div class="alt-send-button">
+                            <i class="fas fa-paper-plane"></i><span class="send-text">SEND</span>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
