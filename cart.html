@@ -17,16 +17,15 @@
 
     <style>
         /* Add your custom CSS here */
-        body
-{
-  background: url('cmain005.png')  #ffded4 ;
-  /* background-blend-mode: multiply; */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: monospace;
-}
+        body {
+            background: url('cmain005.png') #ffded4;
+            /* background-blend-mode: multiply; */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: monospace;
+        }
     </style>
 </head>
 
@@ -46,6 +45,10 @@
                                     <ul id="cart-list" class="list-group mb-3"></ul>
 
                                     <p id="total" class="fw-bold mb-0 text-end"></p>
+
+                                    <div class="text-center">
+                                        <button id="buy-now-btn" class="btn btn-primary">Buy Now</button>
+                                    </div>
 
                                     <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
                                         <a href="item.html"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
@@ -74,14 +77,14 @@
             let totalAmount = 0;
             let cartList = document.getElementById('cart-list');
             let totalElement = document.getElementById('total');
-
+    
             // Function to remove item from cart
             function removeFromCart(index) {
                 cartItems.splice(index, 1);
                 localStorage.setItem('cart', JSON.stringify(cartItems));
                 renderCart();
             }
-
+    
             // Function to render cart items
             function renderCart() {
                 cartList.innerHTML = '';
@@ -99,10 +102,16 @@
                     cartList.appendChild(listItem);
                     totalAmount += item.price;
                 });
-
+    
                 totalElement.textContent = `Total: ₹${totalAmount}`;
             }
-
+    
+            // Function to handle Buy Now button click
+            document.getElementById('buy-now-btn').addEventListener('click', function () {
+                // Redirect to the checkout page
+                window.location.href = 'checkout.html';
+            });
+    
             renderCart();
         });
     </script>
