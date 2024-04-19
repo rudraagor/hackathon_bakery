@@ -58,6 +58,47 @@
   .card:last-child {
     margin-right: 0;
    }
+
+   .text2{
+    background:#FFF8E8;
+   }
+   @keyframes slideInFromBottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+  /* Apply the animation to the text */
+  .animated-text {
+    background: #FFF8E8;
+    animation-name: slideInFromBottom;
+    animation-duration: 1s;
+  }
+  html,
+    body 
+    {
+      overflow-x: hidden; 
+    }
+
+    body::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0); 
+      border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0);
+    }
 </style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -110,7 +151,7 @@
   <div class="container">
     <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
       <div class="col-12 col-lg-6 col-xl-5">
-        <img class="img-fluid rounded" loading="lazy" src="baker05.jpg" alt="About 1">
+        <img class="img-fluid rounded" src="baker05.jpg" alt="About 1">
       </div>
       <div class="col-12 col-lg-6 col-xl-7">
         <div class="row justify-content-xl-center">
@@ -118,9 +159,11 @@
             <h2 class="mb-3" style="text-decoration-color: brown;">Who Are We?</h2>
            
               <!-- Your existing HTML code -->
-            
-              <p class="lead fs-4 text-secondary mb-3" style="color: brown;">At HomeMaker Bakery, we are a dedicated platform that celebrates the artistry and passion of home bakers while providing a seamless marketplace for buyers to discover and indulge in delicious homemade treats</p>
-              <p class="mb-5">Our website is more than just an online marketplace, it's a vibrant ecosystem where passion, creativity, and community converge to celebrate the art of baking. Join us on this delicious journey and discover the joy of homemade delights, one bite at a time.</p>
+            <br><br><br><br>
+            <div class = "animated-text">
+              <p>At HomeMaker Bakery, we are a dedicated platform that celebrates the artistry and passion of home bakers while providing a seamless marketplace for buyers to discover and indulge in delicious homemade treats</p>
+              <p>Our website is more than just an online marketplace, it's a vibrant ecosystem where passion, creativity, and community converge to celebrate the art of baking. Join us on this delicious journey and discover the joy of homemade delights, one bite at a time.</p>
+            </div>
   
              <!-- <p class="mb-5"> our website is more than just an online marketplace, it's a vibrant ecosystem where passion, creativity, and community converge to celebrate the art of baking. Join us on this delicious journey and discover the joy of homemade delights, one bite at a time.</p> -->
             <div class="row gy-4 gy-md-0 gx-xxl-5X">
@@ -131,8 +174,9 @@
                   </div>
                   <div>
                     <h2 class="h4 mb-3">Empowering Home Bakers: </h2>
+                    <div class="text2">
                     <p class="text-secondary mb-0">We recognize the immense talent and creativity within the home baking community. Our website provides a platform for home bakers to showcase their skills, reach a wider audience, and turn their passion for baking into a fulfilling business venture.</p>
-                  </div>
+                  </div></div>
                 </div>
               </div>
               <div class="col-12 col-md-6">
@@ -142,9 +186,10 @@
                   </div>
                   <div>
                     <h2 class="h4 mb-3">Celebrating Homemade Goodness:</h2>
+                    <div class="text2">
                     <p class="text-secondary mb-0">Homemade baked goods possess a unique charm and authenticity that commercial products often lack. We wanted to celebrate the artistry and craftsmanship of home bakers, offering buyers the opportunity to savor delicious treats made with love and care.</p>
                   </div>
-                </div>
+                </div></div>
               </div>
             </div>
           </div>
