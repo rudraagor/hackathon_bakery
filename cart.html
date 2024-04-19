@@ -46,6 +46,7 @@
 
                                     <p id="total" class="fw-bold mb-0 text-end"></p>
 
+                                    
                                     <div class="text-center">
                                         <button id="buy-now-btn" class="btn btn-primary">Buy Now</button>
                                     </div>
@@ -68,53 +69,62 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    <!-- Font Awesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-            let totalAmount = 0;
-            let cartList = document.getElementById('cart-list');
-            let totalElement = document.getElementById('total');
-    
-            // Function to remove item from cart
-            function removeFromCart(index) {
-                cartItems.splice(index, 1);
-                localStorage.setItem('cart', JSON.stringify(cartItems));
-                renderCart();
-            }
-    
-            // Function to render cart items
-            function renderCart() {
-                cartList.innerHTML = '';
-                totalAmount = 0;
-                cartItems.forEach((item, index) => {
-                    let listItem = document.createElement('li');
-                    listItem.textContent = `${item.name}: ₹${item.price}`;
-                    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
-                    // Add a button to remove the item from the cart
-                    let removeButton = document.createElement('button');
-                    removeButton.textContent = 'Remove';
-                    removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
-                    removeButton.addEventListener('click', () => removeFromCart(index));
-                    listItem.appendChild(removeButton);
-                    cartList.appendChild(listItem);
-                    totalAmount += item.price;
+        <!-- Font Awesome -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+                let totalAmount = 0;
+                let cartList = document.getElementById('cart-list');
+                let totalElement = document.getElementById('total');
+        
+                // Function to remove item from cart
+                function removeFromCart(index) {
+                    cartItems.splice(index, 1);
+                    localStorage.setItem('cart', JSON.stringify(cartItems));
+                    renderCart();
+                }
+        
+                // Function to render cart items
+                function renderCart() {
+                    cartList.innerHTML = '';
+                    totalAmount = 0;
+                    cartItems.forEach((item, index) => {
+                        let listItem = document.createElement('li');
+                        listItem.textContent = `${item.name}: ₹${item.price}`;
+                        listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+                        // Add a button to remove the item from the cart
+                        let removeButton = document.createElement('button');
+                        removeButton.textContent = 'Remove';
+                        removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+                        removeButton.addEventListener('click', () => removeFromCart(index));
+                        listItem.appendChild(removeButton);
+                        cartList.appendChild(listItem);
+                        totalAmount += item.price;
+                    });
+        
+                    // Check if total price is greater than 1000, apply discount if necessary
+                    if (totalAmount > 1000) {
+                        let discount = totalAmount * 0.1;
+                        totalAmount -= discount;
+                        totalElement.textContent = `Total: ₹${totalAmount} (10% Discount Applied)`;
+                    } else {
+                        totalElement.textContent = `Total: ₹${totalAmount}`;
+                    }
+                }
+        
+                // Function to handle Buy Now button click
+                document.getElementById('buy-now-btn').addEventListener('click', function () {
+                    // Redirect to the checkout page
+                    window.location.href = 'checkout.html';
                 });
-    
-                totalElement.textContent = `Total: ₹${totalAmount}`;
-            }
-    
-            // Function to handle Buy Now button click
-            document.getElementById('buy-now-btn').addEventListener('click', function () {
-                // Redirect to the checkout page
-                window.location.href = 'checkout.html';
+        
+                renderCart();
             });
-    
-            renderCart();
-        });
-    </script>
+        </script>
+        
+        
 </body>
 
 </html>
