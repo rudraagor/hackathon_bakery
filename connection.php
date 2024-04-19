@@ -12,7 +12,7 @@
         die('Connection Failed : ' .$conn->connect_error);
     }
     else{
-        $stmt = $conn->prepare("insert into accountmn(username, email, pass) values(?, ?, ?)");
+        $stmt = $conn->prepare("insert into accountmmn(username, email, pass) values(?, ?, ?)");
 
         $stmt->bind_param("sss", $username, $email, $pass);
         $stmt->execute();
