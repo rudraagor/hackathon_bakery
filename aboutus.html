@@ -30,6 +30,48 @@
   background-attachment: fixed;
   font-family: monospace;
 }
+
+.nav-pills.flex-column {
+    background-color:#fef9e776; /* Change this color to your desired navbar background color */
+    color: #000000; /*Change this color to your desired active item text color*/
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+
+}
+
+/* Custom CSS for active scrollspy item in left-sided navbar */
+.nav-pills.flex-column .nav-link.active {
+    background-color: #AB4F1D; /* Change this color to your desired active item background color */
+    color: #ffe4be; /* Change this color to your desired active item text color */
+}
+
+.nav-link
+{
+  color: #AB4F1D; /* Change this color to your desired navbar text color */
+
+}
+
+.nav-pills.flex-column .nav-link:hover,
+.nav-pills.flex-column .nav-link:focus {
+  /* text-decoration: none; Remove underline on hover/focus */
+  /* outline: none; Remove outline on focus */
+  color: #5A2919;
+}
+
+#navbar-example3 {
+    /* Other styles... */
+    height: 100vh; /* Adjust the height as needed */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+    Padding-bottom: 70px;
+}
+
+.navbar {
+  background: url('n04.png') #FDF5EA; 
+  /* background: url('nav002.png') #FDF5EA;  */
+  background-size: cover;
+}
 .login-icon {
       width: 30px;
       height: 30px;
@@ -101,7 +143,7 @@
     }
 </style>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
    
     <div class="container">
       <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
@@ -126,7 +168,7 @@
                   <a class="nav-link" href="ourgallery.html"><b>Our Gallery</b></a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link active" href="aboutus.html"><b>About us</b></a>
+                  <a class="nav-link active" style="color: #AB4F1D;" href="aboutus.html"><b>About us</b></a>
                 </li>
                 <li class="nav-item mx-2">
                   <a class="nav-link" href="contactus.html"><b>Contact us</b></a>
