@@ -224,15 +224,23 @@
                 <p class="card-text"> A decadent dream come true. This chocolate cake is moist, rich, and bursting with deep chocolate flavor.</p>
               </div>
               <ul>
-                Price: 
+                Price: ₹550
               </ul>
             </div>
           </div>
           <div class="card-body">
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="btn">Add to cart</a>
-          </div>
-        </div>
+            <!-- <a href="#" class="btn">Buy Now</a> -->
+            <!-- <a href="#" class="btn">Add to cart</a> -->
+
+
+
+
+        <!-- Inside each item section -->
+<a href="buynow.html" class="btn" onclick="addToCart('Chocolate Cake', 550)">Buy Now</a>
+<a href="cart.html" class="btn" onclick="addToCart('Chocolate Cake', 550)">Add to cart</a>
+</div>
+</div>
+
         
         
       </div>
@@ -253,9 +261,10 @@
             </div>
           </div>
           <div class="card-body">
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="btn">Add to cart</a>
-          </div>
+
+<a href="buynow.html" class="btn" onclick="addToCart('Cheese Cake', 200)">Buy Now</a>
+<a href="cart.html" class="btn" onclick="addToCart('Cheese Cake', 200)">Add to cart</a>
+</div>
         </div>
       </div>
     
@@ -279,9 +288,9 @@
             </div>
           </div>
           <div class="card-body">
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="btn">Add to cart</a>
-          </div>
+            <a href="buynow.html" class="btn" onclick="addToCart('Strawberry Cupcake', 70)">Buy Now</a>
+            <a href="cart.html" class="btn" onclick="addToCart('Strawberry Cupcake', 70)">Add to cart</a>
+            </div>
         </div>
         
       </div>
@@ -303,9 +312,9 @@
             </div>
           </div>
           <div class="card-body">
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="btn">Add to cart</a>
-          </div>
+            <a href="buynow.html" class="btn" onclick="addToCart('Chocolate Cupcake', 70)">Buy Now</a>
+            <a href="cart.html" class="btn" onclick="addToCart('Chocolate Cupcake', 70)">Add to cart</a>
+            </div>
         </div>
         
       </div>
@@ -327,14 +336,14 @@
                 <p class="card-text">Buttery and melt-in-your-mouth delicious. Our vanilla cookies are a timeless treat that everyone will love.</p>
               </div>
               <ul>
-                <li class="list-group-item">Price: </li>
+                <li class="list-group-item">Price:150 10 pieces </li>
               </ul>
             </div>
           </div>
           <div class="card-body">
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="btn">Add to cart</a>
-          </div>
+            <a href="buynow.html" class="btn" onclick="addToCart('Vanilla Cookies', 150)">Buy Now</a>
+            <a href="cart.html" class="btn" onclick="addToCart('Vanilla Cookies', 150)">Add to cart</a>
+            </div>
         </div>
     
       </div>
@@ -350,14 +359,14 @@
                 <p class="card-text">A warm, gooey hug in every bite. Our chocolate chip cookies are packed with rich chocolate chips and baked to perfection.</p>
               </div>
               <ul>
-                <li class="list-group-item">Price: </li>
+                <li class="list-group-item">Price:200 10 pieces</li>
               </ul>
             </div>
           </div>
           <div class="card-body">
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="btn">Add to cart</a>
-          </div>
+            <a href="buynow.html" class="btn" onclick="addToCart('Chocolatechip Cookies', 200)">Buy Now</a>
+            <a href="cart.html" class="btn" onclick="addToCart('Chocolatechip Cookies', 200)">Add to cart</a>
+            </div>
         </div>
         
       </div>
@@ -377,14 +386,14 @@
                 <p class="card-text">Chewy chocolate macarons with a crispy outer shell and chocolate ganache filling</p>
               </div>
               <ul>
-                <li class="list-group-item">Price: </li>
+                <li class="list-group-item">Price:200 10 pieces </li>
               </ul>
             </div>
           </div>
           <div class="card-body">
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="btn">Add to cart</a>
-          </div>
+            <a href="buynow.html" class="btn" onclick="addToCart('Chocolate Macarons', 200)">Buy Now</a>
+            <a href="cart.html" class="btn" onclick="addToCart('Chocolate Macarons', 200)">Add to cart</a>
+            </div>
         </div>
         
       </div>
@@ -406,9 +415,9 @@
             </div>
           </div>
           <div class="card-body">
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="btn">Add to cart</a>
-          </div>
+            <a href="buynow.html" class="btn" onclick="addToCart('Multicolor Macarons', 250)">Buy Now</a>
+            <a href="cart.html" class="btn" onclick="addToCart('Multicolor Macarons', 250)">Add to cart</a>
+            </div>
         </div>
         
       </div>
@@ -416,6 +425,13 @@
   </div>
 </div>
 
+<script>
+  function addToCart(itemName, itemPrice) {
+      let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+      cartItems.push({ name: itemName, price: itemPrice });
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+  }
+</script>
 
 
 </body>

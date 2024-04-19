@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="main.css">
     <!-- <link rel="stylesheet" href="logo.css"> -->
 
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <style>
   body
@@ -33,6 +34,30 @@
       width: 30px;
       height: 30px;
     }
+    .container2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    }
+      
+  .card {
+    flex: 1;
+    margin-right: 10px; /* Adjust the margin as per your preference */
+    background-color: #f0f0f000;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px;
+    }
+
+  .card img {
+    width: 600px; /* Set the width of the image to 100% */
+    height: 300px; /* Let the height adjust proportionally */
+    object-fit: cover; /* Ensure the image covers the entire space */
+  }
+  
+  .card:last-child {
+    margin-right: 0;
+   }
 </style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -80,6 +105,67 @@
         </div>
       </nav>
       
+      <!-- About 1 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5">
+  <div class="container">
+    <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+      <div class="col-12 col-lg-6 col-xl-5">
+        <img class="img-fluid rounded" loading="lazy" src="baker05.jpg" alt="About 1">
+      </div>
+      <div class="col-12 col-lg-6 col-xl-7">
+        <div class="row justify-content-xl-center">
+          <div class="col-12 col-xl-11">
+            <h2 class="mb-3" style="text-decoration-color: brown;">Who Are We?</h2>
+           
+              <!-- Your existing HTML code -->
+            
+              <p class="lead fs-4 text-secondary mb-3" style="color: brown;">At HomeMaker Bakery, we are a dedicated platform that celebrates the artistry and passion of home bakers while providing a seamless marketplace for buyers to discover and indulge in delicious homemade treats</p>
+              <p class="mb-5">Our website is more than just an online marketplace, it's a vibrant ecosystem where passion, creativity, and community converge to celebrate the art of baking. Join us on this delicious journey and discover the joy of homemade delights, one bite at a time.</p>
+  
+             <!-- <p class="mb-5"> our website is more than just an online marketplace, it's a vibrant ecosystem where passion, creativity, and community converge to celebrate the art of baking. Join us on this delicious journey and discover the joy of homemade delights, one bite at a time.</p> -->
+            <div class="row gy-4 gy-md-0 gx-xxl-5X">
+              <div class="col-12 col-md-6">
+                <div class="d-flex">
+                  <div class="me-4 text-primary">
+             
+                  </div>
+                  <div>
+                    <h2 class="h4 mb-3">Empowering Home Bakers: </h2>
+                    <p class="text-secondary mb-0">We recognize the immense talent and creativity within the home baking community. Our website provides a platform for home bakers to showcase their skills, reach a wider audience, and turn their passion for baking into a fulfilling business venture.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="d-flex">
+                  <div class="me-4 text-primary">
+       
+                  </div>
+                  <div>
+                    <h2 class="h4 mb-3">Celebrating Homemade Goodness:</h2>
+                    <p class="text-secondary mb-0">Homemade baked goods possess a unique charm and authenticity that commercial products often lack. We wanted to celebrate the artistry and craftsmanship of home bakers, offering buyers the opportunity to savor delicious treats made with love and care.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="container2">
+        <div class="card">
+          <img src="baker03.jpg" class="img-fluid rounded" alt="...">
+        </div>
+        <div class="card">
+          <img src="baker04.jpg" class="img-fluid rounded" alt="...">
+        </div>
+        <div class="card">
+          <img src="baker02.jpeg" class="img-fluid rounded" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
           
 </body>
 
